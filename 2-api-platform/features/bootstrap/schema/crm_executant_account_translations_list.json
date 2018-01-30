@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": true
+    },
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "hydra:member": {
+      "type": "array",
+      "required": true,
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "@id": {
+            "type": "string",
+            "required": true
+          },
+          "@type": {
+            "type": "string",
+            "required": true
+          },
+          "details": {
+            "type": ["null", "string"],
+            "required": true
+          },
+          "id": {
+            "type": "number",
+            "required": true
+          },
+          "locale": {
+            "type": "string",
+            "required": true
+          },
+          "translatable": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    },
+    "hydra:totalItems": {
+      "type": "number",
+      "required": true
+    }
+  }
+}

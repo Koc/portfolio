@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+{# @var renderer \App\Reporting\Renderer\HtmlRenderer #}
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style type="text/css">
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 900px;
+        }
+
+        td {
+            font-family: "Arial", serif;
+            font-size: 10px;
+            vertical-align: top;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        {{ renderer.getCss(stylerClasses)|raw }}
+    </style>
+
+</head>
+<body>
+{% for i, report in reports %}
+    {# @var report \App\Reporting\Generated\GeneratedReport #}
+    {% set stylerClass = stylerClasses[i] %}
+    <table class="{{ renderer.getTableCssCLass(stylerClass) }}">
+        {% for row in report %}
+            <tr>
+                {% for cell in row %}
+                    <td
+                            {% if cell.colspan > 1 %}colspan="{{ cell.colspan }}"{% endif %}
+                            {% if cell.rowspan > 1 %}rowspan="{{ cell.rowspan }}"{% endif %}
+                            class="{{ renderer.getCssClassForCell(cell, stylerClass) }}"
+                            {% if cell.note is not null %}title="{{ cell.note|escape('html_attr') }}"{% endif %}
+                    >
+                        {{ cell.value }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+
+    </table>
+    <br/>
+{% endfor %}
+</body>
+</html>

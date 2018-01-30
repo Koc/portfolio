@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": false,
+    "properties": {
+        "@context": {
+            "type": "string",
+            "required": false
+        },
+        "@id": {
+            "type": "string",
+            "required": false
+        },
+        "@type": {
+            "type": "string",
+            "required": false
+        },
+        "id": {
+            "type": "number",
+            "required": true
+        },
+        "nameEn": {
+            "type": "string",
+            "required": false
+        },
+        "nameUk": {
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "product": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "@id": {
+                    "type": "string",
+                    "required": false
+                },
+                "@type": {
+                    "type": "string",
+                    "required": false
+                },
+                "id": {
+                    "type": "string",
+                    "required": false
+                },
+                "name": {
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "service": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "@id": {
+                    "type": "string",
+                    "required": false
+                },
+                "@type": {
+                    "type": "string",
+                    "required": false
+                },
+                "id": {
+                    "type": "string",
+                    "required": false
+                },
+                "name": {
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "shortName": {
+            "type": "string",
+            "required": false
+        }
+    }
+}

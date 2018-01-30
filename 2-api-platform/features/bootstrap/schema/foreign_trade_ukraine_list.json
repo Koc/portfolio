@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": false
+    },
+    "@id": {
+      "type": "string",
+      "required": false
+    },
+    "@type": {
+      "type": "string",
+      "required": false
+    },
+    "hydra:member": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "object",
+        "required": false,
+        "properties": {
+          "@id": {
+            "type": "string",
+            "required": true
+          },
+          "@type": {
+            "type": "string",
+            "required": true
+          },
+          "amount": {
+            "type": "number",
+            "required": true
+          },
+          "countryCode": {
+            "type": "string",
+            "required": true
+          },
+          "declarationNum": {
+            "type": "number",
+            "required": true
+          },
+          "id": {
+            "type": "number",
+            "required": true
+          },
+          "price": {
+            "type": ["number", "null"],
+            "required": true
+          },
+          "quantity": {
+            "type": "number",
+            "required": true
+          },
+          "registeredAt": {
+            "type": "string",
+            "required": true
+          },
+          "registryCommodityCode": {
+            "type": "string",
+            "required": true
+          },
+          "type": {
+            "type": "number",
+            "required": true
+          }
+        }
+      }
+    },
+    "hydra:search": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "@type": {
+          "type": "string",
+          "required": false
+        },
+        "hydra:mapping": {
+          "type": "array",
+          "required": false,
+          "items": {
+            "type": "object",
+            "required": false,
+            "properties": {
+              "@type": {
+                "type": "string",
+                "required": false
+              },
+              "property": {
+                "type": "string",
+                "required": false
+              },
+              "required": {
+                "type": "boolean",
+                "required": false
+              },
+              "variable": {
+                "type": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "hydra:template": {
+          "type": "string",
+          "required": false
+        },
+        "hydra:variableRepresentation": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "hydra:totalItems": {
+      "type": "number",
+      "required": false
+    }
+  }
+}

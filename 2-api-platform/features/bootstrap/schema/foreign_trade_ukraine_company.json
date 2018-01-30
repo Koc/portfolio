@@ -1,0 +1,83 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required":false,
+  "properties":{
+    "@context": {
+      "type":"string",
+      "required":true
+    },
+    "@id": {
+      "type":"string",
+      "required":true
+    },
+    "@type": {
+      "type":"string",
+      "required":true
+    },
+    "address": {
+      "type":"string",
+      "required":true
+    },
+    "country": {
+      "type":"number",
+      "required":true
+    },
+    "director": {
+      "type":"string",
+      "required":true
+    },
+    "fax": {
+      "type":"string",
+      "required":true
+    },
+    "fullName": {
+      "type":"string",
+      "required":true
+    },
+    "grade": {
+      "type":"number",
+      "required":true
+    },
+    "id": {
+      "type":"string",
+      "required":true
+    },
+    "isKnown": {
+      "type":"number",
+      "required":true
+    },
+    "nameEn": {
+      "type":"string",
+      "required":true
+    },
+    "nameIsOnRussian": {
+      "type":"boolean",
+      "required":true
+    },
+    "name": {
+      "type":"string",
+      "required":true
+    },
+    "notes": {
+      "type":"string",
+      "required":true
+    },
+    "phone1": {
+      "type":"string",
+      "required":true
+    },
+    "phone2": {
+      "type":"string",
+      "required":true
+    },
+    "phone3": {
+      "type":"string",
+      "required":true
+    },
+    "region": {
+      "type":"string",
+      "required":true
+    }
+  }
+}

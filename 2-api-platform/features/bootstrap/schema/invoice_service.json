@@ -1,0 +1,135 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": true
+    },
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "advTax": {
+      "type": ["number", "null"],
+      "required": true
+    },
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "beginAt": {
+      "type": "string",
+      "required": true
+    },
+    "conferenceId": {
+      "type": ["number", "null"],
+      "required": true
+    },
+    "deliveryType": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "discount": {
+      "type": ["number", "null"],
+      "required": true
+    },
+    "endAt": {
+      "type": "string",
+      "required": true
+    },
+    "freeTill": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "invoice": {
+      "type": "string",
+      "required": true
+    },
+    "isAdditional": {
+      "type": "boolean",
+      "required": true
+    },
+    "isAdv": {
+      "type": "boolean",
+      "required": true
+    },
+    "isCustom": {
+      "type": "boolean",
+      "required": true
+    },
+    "isFree": {
+      "type": "boolean",
+      "required": true
+    },
+    "isVatUsed": {
+      "type": ["boolean", "null"],
+      "required": true
+    },
+    "note2": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "note": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "periodicity": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "priceWithDiscount": {
+      "type": ["number", "null"],
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    },
+    "productQuantity": {
+      "type": "number",
+      "required": true
+    },
+    "product": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": ["number", "null"],
+      "required": true
+    },
+    "saleService": {
+      "type": "string",
+      "required": true
+    },
+    "titleEn": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "titleRu": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "titleUk": {
+      "type": ["string", "null"],
+      "required": true
+    },
+    "totalAmount": {
+      "type": ["number", "null"],
+      "required": true
+    },
+    "vat": {
+      "type": ["number", "null"],
+      "required": true
+    }
+  }
+}

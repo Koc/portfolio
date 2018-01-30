@@ -1,0 +1,227 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": true
+    },
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "hydra:member": {
+      "type": "array",
+      "required": true,
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "@id": {
+            "type": "string",
+            "required": true
+          },
+          "@type": {
+            "type": "string",
+            "required": true
+          },
+          "activitiesId": {
+            "type": ["number", "null"],
+            "required": true
+          },
+          "callType": {
+            "type": ["number", "null"],
+            "required": true
+          },
+          "class": {
+            "type": "string",
+            "required": true
+          },
+          "companyType": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "directorFirstNameEn": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "directorFirstName": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "directorLastNameEn": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "directorLastName": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "directorMiddleNameEn": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "directorMiddleName": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "id": {
+            "type": "number",
+            "required": true
+          },
+          "isAdvertizer": {
+            "type": "boolean",
+            "required": true
+          },
+          "isArchived": {
+            "type": "boolean",
+            "required": true
+          },
+          "isCalled": {
+            "type": "boolean",
+            "required": true
+          },
+          "isSubscriber": {
+            "type": "boolean",
+            "required": true
+          },
+          "lastCallAt": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "lastMarketingCallAt": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "notes": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "oldId": {
+            "type": ["number", "null"],
+            "required": true
+          },
+          "operator": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "ownershipType": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "rating": {
+            "type": ["number", "null"],
+            "required": true
+          },
+          "regionId": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "shortTitle": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "supporter": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "titleForEvents": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "titleRu": {
+            "type": "string",
+            "required": true
+          },
+          "titleUk": {
+            "type": ["string", "null"],
+            "required": true
+          },
+          "url": {
+            "type": ["string", "null"],
+            "required": true
+          }
+        }
+      }
+    },
+    "hydra:search": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "@type": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:mapping": {
+          "type": "array",
+          "required": true,
+          "items": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "@type": {
+                "type": "string",
+                "required": true
+              },
+              "property": {
+                "type": "string",
+                "required": true
+              },
+              "required": {
+                "type": "boolean",
+                "required": true
+              },
+              "variable": {
+                "type": "string",
+                "required": true
+              }
+            }
+          }
+        },
+        "hydra:template": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:variableRepresentation": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "hydra:totalItems": {
+      "type": "number",
+      "required": true
+    },
+    "hydra:view": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "@id": {
+          "type": "string",
+          "required": true
+        },
+        "@type": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:first": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:last": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:next": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  }
+}

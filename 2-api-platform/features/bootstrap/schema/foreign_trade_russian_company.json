@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": false
+    },
+    "@id": {
+      "type": "string",
+      "required": false
+    },
+    "@type": {
+      "type": "string",
+      "required": false
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "nameEn": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "regionsCode": {
+      "type": "string",
+      "required": true
+    },
+    "taxId": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

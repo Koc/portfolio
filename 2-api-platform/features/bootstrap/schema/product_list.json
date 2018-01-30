@@ -1,0 +1,209 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": false,
+    "properties": {
+        "@context": {
+            "type": "string",
+            "required": false
+        },
+        "@id": {
+            "type": "string",
+            "required": false
+        },
+        "@type": {
+            "type": "string",
+            "required": false
+        },
+        "hydra:member": {
+            "type": "array",
+            "required": false,
+            "items": {
+                "type": "object",
+                "required": false,
+                "properties": {
+                    "@id": {
+                        "type": "string",
+                        "required": false
+                    },
+                    "@type": {
+                        "type": "string",
+                        "required": false
+                    },
+                    "dailyFri": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "dailyMon": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "dailySat": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "dailySun": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "dailyThu": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "dailyTue": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "dailyWed": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "executant": {
+                        "type": ["object", "null"],
+                        "required": false,
+                        "properties": {
+                            "@id": {
+                                "type": "string",
+                                "required": false
+                            },
+                            "@type": {
+                                "type": "string",
+                                "required": false
+                            },
+                            "id": {
+                                "type": "number",
+                                "required": false
+                            },
+                            "internalName": {
+                                "type": "string",
+                                "required": false
+                            },
+                            "isActive": {
+                                "type": "boolean",
+                                "required": false
+                            },
+                            "vatValue": {
+                                "type": "null",
+                                "required": false
+                            }
+                        }
+                    },
+                    "id": {
+                        "type": "string",
+                        "required": false
+                    },
+                    "invoiceName": {
+                        "type": ["string", "null"],
+                        "required": false
+                    },
+                    "isActive": {
+                        "type": "boolean",
+                        "required": false
+                    },
+                    "monthlyDate": {
+                        "type": ["number", "null"],
+                        "required": false
+                    },
+                    "nameEn": {
+                        "type": ["string", "null"],
+                        "required": false
+                    },
+                    "nameUk": {
+                        "type": ["string", "null"],
+                        "required": false
+                    },
+                    "name": {
+                        "type": "string",
+                        "required": false
+                    },
+                    "periodicity": {
+                        "type": "number",
+                        "required": false
+                    },
+                    "shortName": {
+                        "type": "string",
+                        "required": false
+                    },
+                    "weeklyDay": {
+                        "type": ["number", "null"],
+                        "required": false
+                    }
+                }
+            }
+        },
+        "hydra:search": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "@type": {
+                    "type": "string",
+                    "required": false
+                },
+                "hydra:mapping": {
+                    "type": "array",
+                    "required": false,
+                    "items": {
+                        "type": "object",
+                        "required": false,
+                        "properties": {
+                            "@type": {
+                                "type": "string",
+                                "required": false
+                            },
+                            "property": {
+                                "type": "string",
+                                "required": false
+                            },
+                            "required": {
+                                "type": "boolean",
+                                "required": false
+                            },
+                            "variable": {
+                                "type": "string",
+                                "required": false
+                            }
+                        }
+                    }
+                },
+                "hydra:template": {
+                    "type": "string",
+                    "required": false
+                },
+                "hydra:variableRepresentation": {
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "hydra:totalItems": {
+            "type": "number",
+            "required": false
+        },
+        "hydra:view": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "@id": {
+                    "type": "string",
+                    "required": false
+                },
+                "@type": {
+                    "type": "string",
+                    "required": false
+                },
+                "hydra:first": {
+                    "type": "string",
+                    "required": false
+                },
+                "hydra:last": {
+                    "type": "string",
+                    "required": false
+                },
+                "hydra:next": {
+                    "type": "string",
+                    "required": false
+                }
+            }
+        }
+    }
+}

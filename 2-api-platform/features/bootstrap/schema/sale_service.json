@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": true
+    },
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "deliveryType": {
+      "type": ["null", "string"],
+      "required": true
+    },
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "isPackage": {
+      "type": "boolean",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "periodicity": {
+      "type": ["null", "string"],
+      "required": true
+    },
+    "product": {
+      "type": "string",
+      "required": true
+    },
+    "service": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

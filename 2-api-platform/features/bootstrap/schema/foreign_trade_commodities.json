@@ -1,0 +1,39 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required":false,
+  "properties":{
+    "@context": {
+      "type":"string",
+      "required":false
+    },
+    "@id": {
+      "type":"string",
+      "required":false
+    },
+    "@type": {
+      "type":"string",
+      "required":false
+    },
+    "id": {
+      "type":"number",
+      "required":true
+    },
+    "nameEn": {
+      "type": ["null", "string"],
+      "required":true
+    },
+    "nameRu": {
+      "type": ["null", "string"],
+      "required":true
+    },
+    "nameUk": {
+      "type": ["null", "string"],
+      "required":true
+    },
+    "registryCommodities": {
+      "type":"array",
+      "required":true
+    }
+  }
+}

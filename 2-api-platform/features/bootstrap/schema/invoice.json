@@ -1,0 +1,117 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": false,
+    "properties": {
+        "@context": {
+            "type": "string",
+            "required": false
+        },
+        "@id": {
+            "type": "string",
+            "required": false
+        },
+        "@type": {
+            "type": "string",
+            "required": false
+        },
+        "amount": {
+            "type": "string",
+            "required": false
+        },
+        "contract": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "@id": {
+                    "type": "string",
+                    "required": false
+                },
+                "@type": {
+                    "type": "string",
+                    "required": false
+                },
+                "account": {
+                    "type": "object",
+                    "required": false
+                },
+                "companyId": {
+                    "type": "number",
+                    "required": false
+                },
+                "currency": {
+                    "type": "null",
+                    "required": false
+                },
+                "executant": {
+                    "type": "object",
+                    "required": false
+                },
+                "id": {
+                    "type": "number",
+                    "required": false
+                },
+                "number": {
+                    "type": "string",
+                    "required": false
+                },
+                "oldNumber": {
+                    "type": "string",
+                    "required": false
+                },
+                "signDate": {
+                    "type": "string",
+                    "required": false
+                },
+                "templateId": {
+                    "type": "null",
+                    "required": false
+                }
+            }
+        },
+        "currency": {
+            "type": "string",
+            "required": false
+        },
+        "deptAmount": {
+            "type": "string",
+            "required": false
+        },
+        "fromDate": {
+            "type": "string",
+            "required": false
+        },
+        "id": {
+            "type": "number",
+            "required": false
+        },
+        "losses": {
+            "type": "string",
+            "required": false
+        },
+        "notes": {
+            "type": "string",
+            "required": false
+        },
+        "number": {
+            "type": "string",
+            "required": false
+        },
+        "oldNumber": {
+            "type": "string",
+            "required": false
+        },
+        "serviceId": {
+            "type": "string",
+            "required": false
+        },
+        "signDate": {
+            "type": "string",
+            "required": false
+        },
+        "toDate": {
+            "type": "string",
+            "required": false
+        }
+    }
+}

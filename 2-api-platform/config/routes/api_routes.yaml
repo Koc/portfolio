@@ -1,0 +1,8 @@
+# load routes using separate file, workaround for https://github.com/api-platform/core/issues/1562
+
+api_file_upload:
+    path: "/api/upload"
+    methods: "POST"
+    defaults:
+        _controller: 'App\Controller\WMAPK\UploadAction'
+        _api_item_operation_name: api_upload_file

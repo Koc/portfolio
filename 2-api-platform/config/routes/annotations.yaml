@@ -1,0 +1,9 @@
+controllers:
+    resource: ../../src/Controller/
+    type: annotation
+
+# Don't work for symfony 3.4+
+#JMSJobQueueBundle:
+#    resource: "@JMSJobQueueBundle/Controller/"
+#    type: annotation
+#    prefix: /jobs

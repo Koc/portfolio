@@ -1,0 +1,55 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required":false,
+  "properties":{
+    "@context": {
+      "type":"string",
+      "required":false
+    },
+    "@id": {
+      "type":"string",
+      "required":false
+    },
+    "@type": {
+      "type":"string",
+      "required":false
+    },
+    "amount": {
+      "type":"number",
+      "required":false
+    },
+    "countryCode": {
+      "type":"string",
+      "required":false
+    },
+    "declarationNum": {
+      "type":"number",
+      "required":false
+    },
+    "id": {
+      "type":"number",
+      "required":true
+    },
+    "price": {
+      "type":"number",
+      "required":true
+    },
+    "quantity": {
+      "type":"number",
+      "required":true
+    },
+    "registeredAt": {
+      "type":"string",
+      "required":true
+    },
+    "registryCommodityCode": {
+      "type":"string",
+      "required":true
+    },
+    "type": {
+      "type":"number",
+      "required":true
+    }
+  }
+}

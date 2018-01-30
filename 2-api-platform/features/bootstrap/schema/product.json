@@ -1,0 +1,117 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": false,
+    "properties": {
+        "@context": {
+            "type": "string",
+            "required": false
+        },
+        "@id": {
+            "type": "string",
+            "required": false
+        },
+        "@type": {
+            "type": "string",
+            "required": false
+        },
+        "dailyFri": {
+            "type": "boolean",
+            "required": false
+        },
+        "dailyMon": {
+            "type": "boolean",
+            "required": false
+        },
+        "dailySat": {
+            "type": "boolean",
+            "required": false
+        },
+        "dailySun": {
+            "type": "boolean",
+            "required": false
+        },
+        "dailyThu": {
+            "type": "boolean",
+            "required": false
+        },
+        "dailyTue": {
+            "type": "boolean",
+            "required": false
+        },
+        "dailyWed": {
+            "type": "boolean",
+            "required": false
+        },
+        "executant": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "@id": {
+                    "type": "string",
+                    "required": false
+                },
+                "@type": {
+                    "type": "string",
+                    "required": false
+                },
+                "id": {
+                    "type": "number",
+                    "required": false
+                },
+                "internalName": {
+                    "type": "string",
+                    "required": false
+                },
+                "isActive": {
+                    "type": "boolean",
+                    "required": false
+                },
+                "vatValue": {
+                    "type": "null",
+                    "required": false
+                }
+            }
+        },
+        "id": {
+            "type": "string",
+            "required": true
+        },
+        "invoiceName": {
+            "type": "string",
+            "required": true
+        },
+        "isActive": {
+            "type": "boolean",
+            "required": false
+        },
+        "monthlyDate": {
+            "type": "number",
+            "required": false
+        },
+        "nameEn": {
+            "type": "string",
+            "required": false
+        },
+        "nameUk": {
+            "type": "string",
+            "required": false
+        },
+        "name": {
+            "type": "string",
+            "required": false
+        },
+        "periodicity": {
+            "type": "number",
+            "required": true
+        },
+        "shortName": {
+            "type": "string",
+            "required": false
+        },
+        "weeklyDay": {
+            "type": "number",
+            "required": false
+        }
+    }
+}

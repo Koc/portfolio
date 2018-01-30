@@ -1,0 +1,137 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "@context": {
+      "type": "string",
+      "required": true
+    },
+    "@id": {
+      "type": "string",
+      "required": true
+    },
+    "@type": {
+      "type": "string",
+      "required": true
+    },
+    "hydra:member": {
+      "type": "array",
+      "required": true,
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "@id": {
+            "type": "string",
+            "required": true
+          },
+          "@type": {
+            "type": "string",
+            "required": true
+          },
+          "id": {
+            "type": "number",
+            "required": true
+          },
+          "isActive": {
+            "type": "boolean",
+            "required": true
+          },
+          "shortTitle": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "required": true
+          },
+          "titleUk": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    },
+    "hydra:search": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "@type": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:mapping": {
+          "type": "array",
+          "required": true,
+          "items": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "@type": {
+                "type": "string",
+                "required": true
+              },
+              "property": {
+                "type": "string",
+                "required": true
+              },
+              "required": {
+                "type": "boolean",
+                "required": true
+              },
+              "variable": {
+                "type": "string",
+                "required": true
+              }
+            }
+          }
+        },
+        "hydra:template": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:variableRepresentation": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "hydra:totalItems": {
+      "type": "number",
+      "required": true
+    },
+    "hydra:view": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "@id": {
+          "type": "string",
+          "required": true
+        },
+        "@type": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:first": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:last": {
+          "type": "string",
+          "required": true
+        },
+        "hydra:next": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  }
+}

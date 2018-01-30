@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": false,
+    "properties": {
+        "@context": {
+            "type": "string",
+            "required": false
+        },
+        "@id": {
+            "type": "string",
+            "required": false
+        },
+        "@type": {
+            "type": "string",
+            "required": false
+        },
+        "account": {
+            "type": "object",
+            "required": false
+        },
+        "companyId": {
+            "type": "string",
+            "required": false
+        },
+        "currency": {
+            "type": "string",
+            "required": false
+        },
+        "executant": {
+            "type": "object",
+            "required": false
+        },
+        "id": {
+            "type": "number",
+            "required": false
+        },
+        "number": {
+            "type": "string",
+            "required": false
+        },
+        "oldNumber": {
+            "type": "string",
+            "required": false
+        },
+        "signDate": {
+            "type": "string",
+            "required": false
+        },
+        "templateId": {
+            "type": "number",
+            "required": false
+        }
+    }
+}
