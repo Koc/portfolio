@@ -10,14 +10,23 @@ class ReportingFactory
 {
     private $container;
 
-    public function __construct(ContainerInterface $container)
+    private $generatorsMap;
+
+    public function __construct(ContainerInterface $container, array $generatorsMap)
     {
         $this->container = $container;
+        $this->generatorsMap = $generatorsMap;
     }
 
     public function getGenerator(string $generatorClass): Generator
     {
-        return $this->container->get($generatorClass);
+        if (!isset($this->generatorsMap[$generatorClass])) {
+            throw new \BadMethodCallException(
+                sprintf('No generator service for "%s" generator class.', $generatorClass)
+            );
+        }
+
+        return $this->container->get($this->generatorsMap[$generatorClass]);
     }
 
     public function getSourceProvider(string $sourceProviderClass): ReportSourceProvider

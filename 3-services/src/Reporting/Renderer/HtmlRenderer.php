@@ -4,7 +4,7 @@ namespace App\Reporting\Renderer;
 
 use App\Reporting\Generated\Cell;
 use App\Reporting\Renderer;
-use App\Reporting\ReportResponse;
+use App\Reporting\Builder\ReportGenerationResult;
 use App\Reporting\ReportsStorage;
 use Twig\Environment;
 
@@ -25,7 +25,7 @@ class HtmlRenderer implements Renderer
         $this->stylerFactory = $stylerFactory;
     }
 
-    public function renderGeneratedReportCollection(array $reports, array $stylerClasses): ReportResponse
+    public function renderGeneratedReportCollection(array $reports, array $stylerClasses): ReportGenerationResult
     {
         $html = $this->twig->render(
             self::TEMPLATE,
@@ -35,7 +35,7 @@ class HtmlRenderer implements Renderer
         $filename = $this->storage->generateTargetPath(self::getFormat());
         file_put_contents($filename, $html);
 
-        return new ReportResponse($filename);
+        return new ReportGenerationResult($filename);
     }
 
     public function getCss(array $stylerClasses): string

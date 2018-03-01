@@ -12,6 +12,16 @@ use App\Reporting\Source\ReportSource;
 
 class PlantsGenerator implements Generator
 {
+    public static function getShortAlias(): string
+    {
+        return 'PlantsGenerator';
+    }
+
+    public function getGenerationRequestClass(): string
+    {
+        return PlantsGenerationRequest::class;
+    }
+
     public function getSourceProviderClass(): string
     {
         return PlantsReportSourceProvider::class;

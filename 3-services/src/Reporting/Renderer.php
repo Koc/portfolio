@@ -2,6 +2,7 @@
 
 namespace App\Reporting;
 
+use App\Reporting\Builder\ReportGenerationResult;
 use App\Reporting\Generated\GeneratedReport;
 
 interface Renderer
@@ -13,9 +14,9 @@ interface Renderer
     /**
      * @param GeneratedReport[] $reports
      * @param string[] $stylerClasses
-     * @return ReportResponse
+     * @return ReportGenerationResult
      */
-    public function renderGeneratedReportCollection(array $reports, array $stylerClasses): ReportResponse;
+    public function renderGeneratedReportCollection(array $reports, array $stylerClasses): ReportGenerationResult;
 
     public static function getFormat(): string;
 }

@@ -13,6 +13,16 @@ use App\Reporting\Source\ReportSource;
 
 class DailyGenerator implements Generator
 {
+    public static function getShortAlias(): string
+    {
+        return 'DailyGenerator';
+    }
+
+    public function getGenerationRequestClass(): string
+    {
+        return DailyGenerationRequest::class;
+    }
+
     public function getSourceProviderClass(): string
     {
         return DailyReportSourceProvider::class;

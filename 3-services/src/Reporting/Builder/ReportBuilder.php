@@ -1,28 +1,45 @@
 <?php
 
-namespace App\Reporting;
+namespace App\Reporting\Builder;
 
-use App\Entity\Price\Report;
-use App\Reporting\Command\GenerationRequest;
+use App\Reporting\Command\GenerateReportCommand;
+use App\Reporting\GenerationRequestFactory;
+use App\Reporting\RendererFactory;
+use App\Reporting\ReportingFactory;
 
 class ReportBuilder
 {
+    private $generationRequestFactory;
+
     private $reportingFactory;
 
     private $rendererFactory;
 
-    public function __construct(ReportingFactory $reportingFactory, RendererFactory $rendererFactory)
-    {
+    public function __construct(
+        GenerationRequestFactory $generationRequestFactory,
+        ReportingFactory $reportingFactory,
+        RendererFactory $rendererFactory
+    ) {
+        $this->generationRequestFactory = $generationRequestFactory;
         $this->reportingFactory = $reportingFactory;
         $this->rendererFactory = $rendererFactory;
     }
 
-    public function buildReport(Report $report, GenerationRequest $generationRequest, string $format): ReportResponse
+    public function buildReport(GenerateReportCommand $command): ReportGenerationResult
     {
         $generatedReports = [];
         $stylers = [];
 
-        $generator = $this->reportingFactory->getGenerator($report->getGeneratorClass());
+        $report = $command->getReport();
+        $generatorClass = $report->getGeneratorClass();
+        $generator = $this->reportingFactory->getGenerator($generatorClass);
+
+        $generationRequest = $this->generationRequestFactory
+            ->getGenerationRequest(
+                $generator->getGenerationRequestClass(),
+                $command->getGenerationRequest($generatorClass)
+            );
+
         $sourceProvider = $this->reportingFactory->getSourceProvider($generator->getSourceProviderClass());
 
         $reportSource = $sourceProvider->getReportSource($report, $generationRequest);
@@ -31,6 +48,7 @@ class ReportBuilder
         $generatedReports[] = $generatedReport;
 
         $stylerClasses = $generator->getStylerClasses();
+        $format = $command->getFormat();
         if (!isset($stylerClasses[$format])) {
             throw new \InvalidArgumentException(
                 sprintf('Missing styler for "%s" format of "%s" generator.', $format, get_class($generator))

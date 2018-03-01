@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Reporting;
+namespace App\Reporting\Builder;
 
-class ReportResponse
+class ReportGenerationResult
 {
     private $path;
 

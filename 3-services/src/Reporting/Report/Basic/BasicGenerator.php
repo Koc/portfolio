@@ -13,6 +13,16 @@ use App\Reporting\Source\ReportSource;
 
 class BasicGenerator implements Generator
 {
+    public static function getShortAlias(): string
+    {
+        return 'BasicGenerator';
+    }
+
+    public function getGenerationRequestClass(): string
+    {
+        return BasicGenerationRequest::class;
+    }
+
     public function getSourceProviderClass(): string
     {
         return BasicReportSourceProvider::class;

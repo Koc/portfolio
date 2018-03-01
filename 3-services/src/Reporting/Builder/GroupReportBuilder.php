@@ -1,28 +1,46 @@
 <?php
 
-namespace App\Reporting;
+namespace App\Reporting\Builder;
 
-use App\Entity\Price\Group;
-use App\Reporting\Command\GenerationRequest;
+use App\Reporting\Command\GenerateGroupReportCommand;
+use App\Reporting\GenerationRequestFactory;
+use App\Reporting\RendererFactory;
+use App\Reporting\ReportingFactory;
 
 class GroupReportBuilder
 {
+    private $generationRequestFactory;
+
     private $reportingFactory;
 
     private $rendererFactory;
 
-    public function __construct(ReportingFactory $reportingFactory, RendererFactory $rendererFactory)
-    {
+    public function __construct(
+        GenerationRequestFactory $generationRequestFactory,
+        ReportingFactory $reportingFactory,
+        RendererFactory $rendererFactory
+    ) {
+        $this->generationRequestFactory = $generationRequestFactory;
         $this->reportingFactory = $reportingFactory;
         $this->rendererFactory = $rendererFactory;
     }
 
-    public function buildGroupReport(Group $group, GenerationRequest $generationRequest, string $format): ReportResponse
+    public function buildGroupReport(GenerateGroupReportCommand $command): ReportGenerationResult
     {
         $generatedReports = [];
         $stylers = [];
-        foreach ($group->getReports() as $report) {
-            $generator = $this->reportingFactory->getGenerator($report->getGeneratorClass());
+        $format = $command->getFormat();
+
+        foreach ($command->getGroup()->getReports() as $report) {
+            $generatorClass = $report->getGeneratorClass();
+            $generator = $this->reportingFactory->getGenerator($generatorClass);
+
+            $generationRequest = $this->generationRequestFactory
+                ->getGenerationRequest(
+                    $generator->getGenerationRequestClass(),
+                    $command->getGenerationRequest($generatorClass)
+                );
+
             $sourceProvider = $this->reportingFactory->getSourceProvider($generator->getSourceProviderClass());
 
             $reportSource = $sourceProvider->getReportSource($report, $generationRequest);

@@ -6,7 +6,7 @@ use App\Reporting\Generated\Cell;
 use App\Reporting\Generated\GeneratedReport;
 use App\Reporting\Renderer;
 use App\Reporting\Renderer\MatrixTraverser\ReportMatrixTraveller;
-use App\Reporting\ReportResponse;
+use App\Reporting\Builder\ReportGenerationResult;
 use App\Reporting\ReportsStorage;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
@@ -32,9 +32,9 @@ class SpreadsheetRenderer implements Renderer
      * @param GeneratedReport[] $reports
      * @param string[] $stylerClasses
      *
-     * @return ReportResponse
+     * @return ReportGenerationResult
      */
-    public function renderGeneratedReportCollection(array $reports, array $stylerClasses): ReportResponse
+    public function renderGeneratedReportCollection(array $reports, array $stylerClasses): ReportGenerationResult
     {
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -80,7 +80,7 @@ class SpreadsheetRenderer implements Renderer
         $writer = new Xlsx($spreadsheet);
         $writer->save($filename);
 
-        return new ReportResponse($filename);
+        return new ReportGenerationResult($filename);
     }
 
     public static function getFormat(): string

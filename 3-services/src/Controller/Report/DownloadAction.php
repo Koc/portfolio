@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controller\Group;
+namespace App\Controller\Report;
 
 use App\Reporting\ReportsStorage;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class DownloadReportsAction
+class DownloadAction
 {
     private $storage;
 

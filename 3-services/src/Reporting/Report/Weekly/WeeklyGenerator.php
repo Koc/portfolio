@@ -15,6 +15,16 @@ use App\Reporting\Source\ReportSource;
 
 class WeeklyGenerator implements Generator
 {
+    public static function getShortAlias(): string
+    {
+        return 'WeeklyGenerator';
+    }
+
+    public function getGenerationRequestClass(): string
+    {
+        return WeeklyGenerationRequest::class;
+    }
+
     public function getSourceProviderClass(): string
     {
         return WeeklyReportSourceProvider::class;

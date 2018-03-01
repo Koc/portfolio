@@ -11,6 +11,10 @@ use App\Reporting\Source\ReportSource;
  */
 interface Generator
 {
+    public static function getShortAlias(): string;
+
+    public function getGenerationRequestClass(): string;
+
     public function getSourceProviderClass(): string;
 
     /**
